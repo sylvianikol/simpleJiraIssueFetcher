@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<issues>
+    <issue>
+        <summary>Unable to checkout to a local branch.</summary>
+        <key>SRCTREEWIN-13473</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13473</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1)bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1)&#13;
+&#13;
+stty: 'standard input': Inappropriate ioctl for device</description>
+        <reporter>Engg 2</reporter>
+        <created-date>2021-02-22T09:45:49.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Sourcetree closes on Cancelling the checking out branch from browser</summary>
+        <key>SRCTREEWIN-13472</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13472</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>h3. Issue Summary&#13;
+&#13;
+Sourcetree closes on Cancelling the checking out branch from browser&#13;
+h3. Steps to Reproduce&#13;
+&#13;
+1. Go to any Bitbucket repository in browser https://bitbucket.org/&#13;
+2. Navigate to "Branches"&#13;
+3. Select any branch&#13;
+4. Click "Checkout" =&gt; "Checkout in sourcetree"&#13;
+5. Click "Open sourcetree" in browser popup.&#13;
+6. Click "Cancel" in Sourcetree "URL actions" popup&#13;
+h3. Expected Results&#13;
+&#13;
+Application shouldn't close.&#13;
+h3. Actual Results&#13;
+&#13;
+Application closes unexpectedly.&#13;
+h3. Workaround&#13;
+ Currently there is no known workaround for this behavior. A workaround will be added here when available</description>
+        <reporter>Apoorv Singhal</reporter>
+        <created-date>2021-02-22T06:00:19.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Allow tags to be added using date of commit instead of current date</summary>
+        <key>SRCTREEWIN-13470</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13470</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>When adding a new tag Sourcetree uses the current date on that tag. The tag date is then used by the Github UI for ordering releases. If tags were not added chronologically, the releases are displayed out of sequence. &#13;
+&#13;
+This can be avoided by setting GIT_COMMITTER_DATE to the date of the commit before adding the tag. &#13;
+&#13;
+I suggest adding this as an option under the Advanced Options of the Tag dialog.</description>
+        <reporter>Gair Shields</reporter>
+        <created-date>2021-02-18T21:35:20.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Remote not detected after username &amp; password keyed in</summary>
+        <key>SRCTREEWIN-13469</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13469</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>This concerns sourcetree 3.4.2 for Windows 10. No matter how much I try, it remains undetected. The remote toolbar shows a red exclamation mark even after github website has been properly connected with username &amp; password keyed in. Please fix this.</description>
+        <reporter>School-learner</reporter>
+        <created-date>2021-02-18T06:32:07.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>go to HEAD</summary>
+        <key>SRCTREEWIN-13468</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13468</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>[https://community.atlassian.com/t5/Sourcetree-questions/Jump-to-HEAD/qaq-p/599099]&#13;
+&#13;
+says it all, was posted in 2017 but I can't find anr ref to it being implemented</description>
+        <reporter>Peter</reporter>
+        <created-date>2021-02-16T08:59:58.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>SourceTree merge resolve conflicts doesn't launch beyond compare</summary>
+        <key>SRCTREEWIN-13467</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13467</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>SourceTree creates the temporary files but beyond compare is not launched. Same for KDiff.&#13;
+&#13;
+&gt; Files created:&#13;
+&#13;
+Program_BACKUP_1447.cs&#13;
+Program_BASE_1447.cs&#13;
+Program_LOCAL_1447.cs&#13;
+Program_REMOTE_1447.cs&#13;
+&#13;
+&gt; Logs:&#13;
+&#13;
+[&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks status --porcelain --ignore-submodules=dirty --untracked-files=all --no-ahead-behind",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0641203",&#13;
+ "CallerContext": "GetFileStatus",&#13;
+ "Output": "UU amitTest/Program.cs\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks status --porcelain --ignore-submodules=dirty --untracked-files=all --no-ahead-behind",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0598416",&#13;
+ "CallerContext": "GetStatusProcess",&#13;
+ "Output": "UU amitTest/Program.cs\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks rev-parse HEAD",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0309172",&#13;
+ "CallerContext": "Summary",&#13;
+ "Output": "d017f82712398519705ad2143e57e10a89f329a0\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks remote show -n origin",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0498669",&#13;
+ "CallerContext": "GetRemoteInfo",&#13;
+ "Output": "* remote origin\n Fetch URL: https://azo747@bitbucket.org/rosemantech/amittest.git\n Push URL: https://azo747@bitbucket.org/rosemantech/amittest.git\n HEAD branch: (not queried)\n Remote branches: (status not queried)\n A\n B\n master\n Local branches configured for 'git pull':\n A merges with remote A\n B merges with remote B\n master merges with remote master\n Local ref configured for 'git push' (status not queried):\n (matching) pushes to (matching)\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks config push.default",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0443166",&#13;
+ "CallerContext": "GetGeneralConfig",&#13;
+ "Output": ""&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks mergetool -y --tool=sourcetree -- amitTest/Program.cs",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:01.6232054",&#13;
+ "CallerContext": "GetVisualMergeProcess",&#13;
+ "Output": "Merging:\namitTest/Program.cs\n\nNormal merge conflict for 'amitTest/Program.cs':\n \{local}: modified file\n \{remote}: modified file\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks status --porcelain --ignore-submodules=dirty --untracked-files=all --no-ahead-behind",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0598399",&#13;
+ "CallerContext": "GetFileStatus",&#13;
+ "Output": "UU amitTest/Program.cs\n?? amitTest/Program_BACKUP_1447.cs\n?? amitTest/Program_BASE_1447.cs\n?? amitTest/Program_LOCAL_1447.cs\n?? amitTest/Program_REMOTE_1447.cs\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks status --porcelain --ignore-submodules=dirty --untracked-files=all --no-ahead-behind",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0558506",&#13;
+ "CallerContext": "GetStatusProcess",&#13;
+ "Output": "UU amitTest/Program.cs\n?? amitTest/Program_BACKUP_1447.cs\n?? amitTest/Program_BASE_1447.cs\n?? amitTest/Program_LOCAL_1447.cs\n?? amitTest/Program_REMOTE_1447.cs\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks diff --unified=3 -M d017f82712398519705ad2143e57e10a89f329a0 --no-color -- amitTest/Program.cs",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0528606",&#13;
+ "CallerContext": "GetFileDiffAgainstBaseProcess",&#13;
+ "Output": "diff --git a/amitTest/Program.cs b/amitTest/Program.cs\nindex c32ff5c..696c1ba 100644\n--- a/amitTest/Program.cs\n+++ b/amitTest/Program.cs\n@@ -10,7 +10,11 @@ namespace amitTest\n \{\n static void Main(string[] args)\n {\n+&lt;&lt;&lt;&lt;&lt;&lt;&lt; .merge_file_a15740\n Console.WriteLine(\"hello new GIT world (branch B)\");\n+=======\n+ Console.WriteLine(\"hello new GIT world (branch A)\");\n+&gt;&gt;&gt;&gt;&gt;&gt;&gt; .merge_file_a06748\n }\n }\n }\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks rev-parse HEAD",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0089755",&#13;
+ "CallerContext": "Summary",&#13;
+ "Output": "d017f82712398519705ad2143e57e10a89f329a0\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks remote show -n origin",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0069807",&#13;
+ "CallerContext": "GetRemoteInfo",&#13;
+ "Output": "* remote origin\n Fetch URL: https://azo747@bitbucket.org/rosemantech/amittest.git\n Push URL: https://azo747@bitbucket.org/rosemantech/amittest.git\n HEAD branch: (not queried)\n Remote branches: (status not queried)\n A\n B\n master\n Local branches configured for 'git pull':\n A merges with remote A\n B merges with remote B\n master merges with remote master\n Local ref configured for 'git push' (status not queried):\n (matching) pushes to (matching)\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks config push.default",&#13;
+ "Directory": "C:\\Source\\_GIT\\amittest",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0438831",&#13;
+ "CallerContext": "GetGeneralConfig",&#13;
+ "Output": ""&#13;
+ }&#13;
+]</description>
+        <reporter>Amit Zohar</reporter>
+        <created-date>2021-02-14T16:13:25.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>100% Disk usage</summary>
+        <key>SRCTREEWIN-13466</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13466</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>At startup and at various points after that, SourceTree takes 100% disk usage making the system unusable to minutes sometimes. I have reinstalled SourceTree after doing a complete cleanup and that has not helped.</description>
+        <reporter>Aloke Bordia</reporter>
+        <created-date>2021-02-12T22:16:30.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>3.4.3-beta-1 issues</summary>
+        <key>SRCTREEWIN-13465</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13465</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>After downloading and installing the 3.4.3 beta-1 release, I have the following issues:&#13;
+ # At the end of the installation I got a message stating there is already an existing SSH key&#13;
+ # When launching SourceTree, all of my tabs have been closed and there are no repos listed in the Local view. (I am guessing this is because it's a beta release and my 3.4.2 install is still intact. This is my first beta release test so I was not aware of this) so I browse to a local folder and select it.&#13;
+ # Then I get a message stating LFS is being used and asking if it is OK to install the necessary files, to which I clicked Yes&#13;
+ # Then I get a message that 'git lfs install' failed with code 2&#13;
+ # Then the same dialog as in 3.4.2 indicating the LFS binary content has not been downloaded yet appeared again.&#13;
+ # Items 3-5 happen every time I launch the beta release now.</description>
+        <reporter>Alan Cordner</reporter>
+        <created-date>2021-02-11T16:14:47.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Sorry, forgot to add the label.</comment-text>
+                <author>Alan Cordner</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Code selection copy in Commit history view makes app unresponsive</summary>
+        <key>SRCTREEWIN-13464</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13464</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>*BUG:* When trying to copy a code snippet from a file listed in a commit history, the application goes unresponsive and the code isn't copied to the clipboard.&#13;
+&#13;
+*EXPECTED BEHAVIOUR:* When trying to copy a code snippet from a file listed in a commit history, the application should not go unresponsive and the code snippet should be copied to the users clipboard.</description>
+        <reporter>Fernando Soares</reporter>
+        <created-date>2021-02-10T17:46:44.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Intermitent GitHub/GitLab login window is shown</summary>
+        <key>SRCTREEWIN-13463</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13463</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>In version 3.4.2,&#13;
+&#13;
+Intermittently you can see small windows appearing in middle of screen, they do constantly log into GitHub/GitLab.&#13;
+&#13;
+Couldn't these things happen under the hood and stay invisible for the end user?&#13;
+&#13;
+Below, a link to a small GIF showing the window briefly appearing and disappearing:&#13;
+&#13;
+[https://ibb.co/0K9QR13]&#13;
+&#13;
+ &#13;
+&#13;
+Thank you</description>
+        <reporter>aybe</reporter>
+        <created-date>2021-02-09T02:05:13.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Launch SSH Agent should display correct state</summary>
+        <key>SRCTREEWIN-13459</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13459</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>h3. Issue Summary&#13;
+&#13;
+Clicking on launch SSH agent option does nothing&#13;
+h3. Steps to Reproduce&#13;
+&#13;
+1. Deploy Windows 10 18363 OS build.&#13;
+ 2. Perform Windows Updates.&#13;
+ 3. Install application from vendor site.&#13;
+ 4. Click on Bitbucket and create a new account (for new user).&#13;
+ 5. After completion the authentication, it will complete the installation setup.&#13;
+ 6. Launch the application then, will get a pop up of SSH key .&#13;
+ 7. Close the popup box and continue.&#13;
+ 8. Then, perform upgrade to latest OS build.&#13;
+ 9. Launch the application from start menu.&#13;
+ 10. Login in to the application with valid credentials.&#13;
+ 11. Click on Tools menu.&#13;
+ 12. Click on Launch SSH agent option in tools menu.&#13;
+ 13. Observe the issue.&#13;
+ &#13;
+h3. Expected Results&#13;
+&#13;
+while clicking on “Launch SSH agent” option in the application, a dialog box should pop up and ask for SSH key&#13;
+h3. Actual Results&#13;
+&#13;
+while clicking on “launch SSH agent” option in the application , it shows nothing.&#13;
+h3. Workaround&#13;
+&#13;
+No workaround</description>
+        <reporter>Apoorv Singhal</reporter>
+        <created-date>2021-02-08T09:10:32.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>A beta version with the fix for this issue has been released here:&#13;
+[https://product-downloads.atlassian.com/software/sourcetree/windows/beta/SourceTreeSetup-3.4.3-beta-1.exe]&#13;
+Please verify.&#13;
+Thanks</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Fixed in 3.4.3 version</comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Sourcetree freezing on being left in background</summary>
+        <key>SRCTREEWIN-13458</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13458</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>h3. Issue Summary&#13;
+&#13;
+Sourcetree freezes&#13;
+h3. Steps to Reproduce&#13;
+ # Using *3.4.2* I am experiencing the same freezes. Sourcetree just gets stuck until I kill it from the task manager.&#13;
+&#13;
+For me the trigger for the freeze is putting Sourctree in the background for 5 minutes.&#13;
+&#13;
+CPU: AMD Ryzen Pro 4750U&#13;
+&#13;
+RAM: 32 GB&#13;
+&#13;
+Screen: 4k connected to HDMI port of the laptop&#13;
+&#13;
+h3. Expected Results&#13;
+&#13;
+Sourcetree should not freeze&#13;
+h3. Actual Results&#13;
+&#13;
+Should not freeze&#13;
+{noformat}&#13;
+...&#13;
+{noformat}&#13;
+h3. Workaround&#13;
+&#13;
+No workaround</description>
+        <reporter>Apoorv Singhal</reporter>
+        <created-date>2021-02-08T08:59:47.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>v3.8.8 - Local repository list freezes when scrolling is needed</summary>
+        <key>SRCTREEWIN-13457</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13457</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>If the repository list is large enough to require a scroll bar, it is very likely to freeze the sourcetree application window for a few seconds or indefinitely.&#13;
+&#13;
+Usually doesn't show up as "Not Responding", just a slightly higher CPU usage and unresponsive window. I then have to terminate the process and start it again, but with a large repository list it is almost guaranteed that my window will freeze within 5 seconds of opening the local repository list.&#13;
+&#13;
+Placing repos in folders helps to some extent, at this point I am not able to re-arrange the folders without freezing and simply resort to using the system file explorer or searching by the name directly without opening any folders.&#13;
+&#13;
+I check for updates for it says I am up-to-date. My version: 3.8.8.3848. Since it didn't show up in the list of versions I selected the closest one.&#13;
+&#13;
+&#13;
+Steps:&#13;
+- Add repositories until the scrollbar appears in the Local Repository list&#13;
+- Scroll, select repos, open folders, for a few seconds (usually 5s)&#13;
+- Window will start freezing</description>
+        <reporter>jm</reporter>
+        <created-date>2021-02-07T15:51:31.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>I have updated to version 3.4.2 by running the setup downloaded from the main website.&#13;
+The issue still occurs in this version.</comment-text>
+                <author>jm</author>
+            </comment>
+            <comment>
+                <comment-text>We are working on a fix for this, and there is already an existing bug for - https://jira.atlassian.com/browse/SRCTREEWIN-11421&#13;
+&#13;
+ &#13;
+&#13;
+Closing this as duplicate.</comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+            <comment>
+                <comment-text>https://jira.atlassian.com/browse/SRCTREEWIN-11421</comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Optional extended integration settings of remote are not saved across SourceTree restarts</summary>
+        <key>SRCTREEWIN-13450</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13450</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Steps to reproduce:&#13;
+ # Open repository settings&#13;
+ # Go to edit remote dialog&#13;
+ # Fill in Legacy account settings i.e. for Bitbucket Server&#13;
+ # Click Ok in Remote details dialog&#13;
+ # Click Ok Repository settings dialog&#13;
+ # Restart SourceTree&#13;
+ # Open Remote details again&#13;
+&#13;
+Expected integration settings to be saved&#13;
+&#13;
+Actually, integration settings are empty</description>
+        <reporter>Nikolay Baraboshkin</reporter>
+        <created-date>2021-02-05T11:05:19.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Refer to this https://jira.atlassian.com/browse/SRCTREEWIN-12912</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Application get crashed while clicking on edit button in remote settings</summary>
+        <key>SRCTREEWIN-13449</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13449</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>- Open SourceTree &#13;
+- Go to Settings &#13;
+- Click on remote &#13;
+- Click on the edit button &#13;
+- Applications get crash &#13;
+&#13;
+&#13;
+!image-2021-02-05-15-21-34-737.png|width=1769,height=995!</description>
+        <reporter>Dhaval Rathod</reporter>
+        <created-date>2021-02-05T09:54:33.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>!image-2021-02-05-15-25-47-998.png!</comment-text>
+                <author>Dhaval Rathod</author>
+            </comment>
+            <comment>
+                <comment-text>There is an existing bug for this which you can track.&#13;
+https://jira.atlassian.com/browse/SRCTREEWIN-13417&#13;
+Closing this one.</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>https://jira.atlassian.com/browse/SRCTREEWIN-13417</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>@Apoorv please link that issue with this.  Not able to find any linked issue in SRCTREEWIN-13417.&#13;
+&#13;
+Kindly do the needful.</comment-text>
+                <author>Dhaval Rathod</author>
+            </comment>
+            <comment>
+                <comment-text>It's already linked https://jira.atlassian.com/browse/SRCTREEWIN-13253</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Sorry but I'm not able to find in Issue links or in Duplicates By. &#13;
+&#13;
+I mean is not in the comments, Link issue with other open issue so in future, It will help to find issue easily. &#13;
+&#13;
+Hope now you got my point.</comment-text>
+                <author>Dhaval Rathod</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Buffer overflow with git shell</summary>
+        <key>SRCTREEWIN-13448</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13448</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Hello everyone,&#13;
+&#13;
+ &#13;
+&#13;
+My company is reporting me multiple buffer overflow on my machine (4000 per day) created bt this tool:&#13;
+&#13;
+c:\users\&lt;username&gt;\appdata\local\atlassian\sourcetree\git_local\usr\bin\sh.exe&#13;
+&#13;
+This is considered a dangerous behaviour so we need to investigate.&#13;
+&#13;
+Does anyone has any idea about why ?&#13;
+&#13;
+ &#13;
+&#13;
+Thank you</description>
+        <reporter>simon Le Ster</reporter>
+        <created-date>2021-02-04T08:03:08.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Unable to create pull request</summary>
+        <key>SRCTREEWIN-13447</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13447</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Since installing version 3.4.2 of Sourcetree for Windows, I am not able to create pull requests.&#13;
+&#13;
+My previous version of Sourcetree was 3.3.9, so I don't know where the problem started.&#13;
+&#13;
+I have tried uninstalling Sourcetree completely and reinstalling it, but the problem still persist.&#13;
+&#13;
+This is a problem similar to the one reported here https://jira.atlassian.com/browse/SRCTREEWIN-12482 but this time the workaround doesn't work any more.</description>
+        <reporter>Jon G</reporter>
+        <created-date>2021-02-03T15:14:46.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>As the OP said the workaround does not work.</comment-text>
+                <author>Jon G</author>
+            </comment>
+            <comment>
+                <comment-text>We are working to fix this for the upcoming release [~7eb383a8308e] &#13;
+You can track the progress on SRCTREEWIN-12482</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Report how conflict was resolved</summary>
+        <key>SRCTREEWIN-13446</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13446</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>When delivering a resolution to a conflict there is no indication as to how the conflict was resolved.  Knowing how the conflict was resolved is pretty essential in whether or not the pull request should be approved or denied.&#13;
+&#13;
+ &#13;
+&#13;
+example - &#13;
+&#13;
+Merge branch 'test' into origin&#13;
+# Conflicts:&#13;
+ # # x/models/x.slx&#13;
+ # # x/models/x&#13;
+ # # x/models/x.slx&#13;
+&#13;
+ </description>
+        <reporter>Paul Anderson</reporter>
+        <created-date>2021-02-03T11:55:40.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Cannot fetch or pull on Sourcetree for windows</summary>
+        <key>SRCTREEWIN-13445</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13445</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>When trying to fetch or pull from my remote in sourcetree, if comes up with the error:&#13;
+&#13;
+git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks fetch origin&#13;
+remote: HTTP Basic: Access denied&#13;
+fatal: Authentication failed for "[my remote]"&#13;
+&#13;
+I don't know why it is doing this as I have the proper gitlab access and this hasn't been an issue previously. Under settings/authentication, it keeps asking me to authenticate my log in everytime I open this. I have tried re cloning my remote but it keeps coming up with authentication errors and the credential pop up does not appear</description>
+        <reporter>Stephanie Unsworth</reporter>
+        <created-date>2021-02-02T16:36:18.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Startup window default tab incorrect information</summary>
+        <key>SRCTREEWIN-13444</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13444</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>On application start there is 1 tab, which shows all repositories.&#13;
+ * It has close button (x) (when it should not since the tab is un closable, because its default tab)&#13;
+ * On right click it has default tab behaviour: close tab and other. (when it should not since the tab is un closable, because its default tab)&#13;
+&#13;
+Attaching sample:&#13;
+&#13;
+!image-2021-01-30-16-57-16-167.png!&#13;
+&#13;
+Version:&#13;
+&#13;
+!image-2021-01-30-16-58-24-425.png!</description>
+        <reporter>naxaliav</reporter>
+        <created-date>2021-01-30T14:59:47.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>checkout-existing” option isn’t working with 3.3.9 version of sourcetree as the remote repository details are not being fetched.</summary>
+        <key>SRCTREEWIN-13440</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13440</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>We are currently using sourcetree version 3.3.9.&#13;
+&#13;
+"Checkout-existing” option isn’t working with 3.3.9 version of sourcetree as the remote repository details are not being fetched.&#13;
+&#13;
+Also, there is an exclamation mark hovering over the remote icon on sourcetree.&#13;
+&#13;
+If we manually edit the remote repository details, the application crashes unexpectedly.&#13;
+&#13;
+Attaching error details.</description>
+        <reporter>SCMTeam</reporter>
+        <created-date>2021-02-01T13:35:20.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>I am unable to attach images.</comment-text>
+                <author>SCMTeam</author>
+            </comment>
+            <comment>
+                <comment-text>This is related to two issues which we are working to fix:&#13;
+&#13;
+SRCTREEWIN-13257&#13;
+&#13;
+SRCTREEWIN-13417&#13;
+&#13;
+Meanwhile, you can verify if these are related to your issue, while we are working to fix this.&#13;
+Thanks</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Hi Apoorv,&#13;
+&#13;
+Both the issues you have shared are not relevant to the issue which we are experiencing. &#13;
+Issue is with "Checkout existing" option. Can you please provide a way so that we can upload screenshots ?</comment-text>
+                <author>SCMTeam</author>
+            </comment>
+            <comment>
+                <comment-text>Team, please provide update on this.&#13;
+&#13;
+Checkout existing option was working fine for 2.5.5.&#13;
+&#13;
+looks like version 3.3.9. is not storing already checkout history in 'checkout existing' tab.</comment-text>
+                <author>SCMTeam</author>
+            </comment>
+            <comment>
+                <comment-text>There is a beta version released with some of the related issues fixed.&#13;
+[https://product-downloads.atlassian.com/software/sourcetree/windows/beta/SourceTreeSetup-3.4.3-beta-1.exe]&#13;
+Could you please verify if your issue still persists.&#13;
+Thanks</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Can't create a pull request</summary>
+        <key>SRCTREEWIN-13439</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13439</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I just installed *SourceTree* version *3.4.2* and find that I cannot create a pull request.&#13;
+&#13;
+In the previous version (not remembering which one I had installed) I could solve this with the recommendation indicated in [https://community.atlassian.com/t5/Sourcetree-questions/Unable-to-Create-Pull-Request-Default-Browser-Empty/qaq-p/1213475].&#13;
+&#13;
+But this no longer works. To be able to do the pull request I must do a _push_ and generate it directly on the web, this does work. But if I try it from SourceTree, a dialog tells me that "You don't have any remotes wich have extended integration settings configured, blablabla ...".&#13;
+&#13;
+When trying a _push_, it is very likely that I need to refresh my OAuth token, which for some reason is lost for this operation only.&#13;
+&#13;
+As much as I update my credentials, do a refresh of the OAuth token, nothing works.&#13;
+&#13;
+I can do _fetch, pull, tag, commit_ but not a _pull request_. &#13;
+&#13;
+I think it is important to mention that my account in bitbucket is through google, that is, I have not created a user. Under this condition, to reproduce the behavior you just have to create a branch from Sourcetree in any repository and then try to create a pull request.&#13;
+&#13;
+The _*Remote*_ button on the toolbar never changes state, always showing the _exclamation point_ even though my credentials and token are correct and up to date.&#13;
+&#13;
+ </description>
+        <reporter>LuisCarro</reporter>
+        <created-date>2021-02-01T12:37:15.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>I have noticed that reverting to version 3.4.1 does not work either.&#13;
+&#13;
+On the other hand, Sourcetree version 3.4.2 here is marked as unrelease, but when going to the download page, 3.4.2 is the proposal.</comment-text>
+                <author>LuisCarro</author>
+            </comment>
+            <comment>
+                <comment-text>[~66c10323202f], Thank you for raising the issue. We will look into it shortly. By the way, we have corrected the release status for 3.4.2. Thanks!</comment-text>
+                <author>Ranjith Chazhoor</author>
+            </comment>
+            <comment>
+                <comment-text>Hi [~66c10323202f],&#13;
+You can refer to the bug SRCTREEWIN-12482 which is already open for this issue.&#13;
+We are working to fix this for the upcoming release.&#13;
+I'll close this one now.&#13;
+Thanks.</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Duplicates SRCTREEWIN-12482</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Different branch folders are merged anyway</summary>
+        <key>SRCTREEWIN-13438</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13438</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Hi!&#13;
+&#13;
+I have this branch 'bugfixes/bug1' and "Bugfixes/bug2'. I clearly made a typo, one starts with an uppercase B and the other with a lowercase b.&#13;
+&#13;
+When I use those branches locally sourcetree puts them automatically in the same folder:&#13;
+ * bugfixes&#13;
+ ** bug1&#13;
+ ** bug2&#13;
+&#13;
+This is no a bad thing in itself, it's actually a good thing. But when I try to push my commits to origin it tries to push them to 'bugfixes/bug2', that does not exist.&#13;
+&#13;
+ &#13;
+&#13;
+It's like sourcetree uses the folder name to reconstruct the origin branch's name instead of the actual origin branch's name.&#13;
+&#13;
+ &#13;
+&#13;
+The 'Affects Versions' field doesn't have the option but my version is 3.3.8.3848</description>
+        <reporter>Julien Cambier</reporter>
+        <created-date>2021-02-01T11:38:05.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>'git lfs pull' called everytime when starting Sourcetree or opening a repository in a tab</summary>
+        <key>SRCTREEWIN-13437</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13437</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Every time when Sourcetree starts or a repository is opened in a tab it ask to run 'git lfs pull'. This is done for the same repositories on every startup even if there are no changes to that repository/clone.</description>
+        <reporter>Robert FIEDLER</reporter>
+        <created-date>2021-02-01T07:27:37.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Duplicates https://jira.atlassian.com/browse/SRCTREEWIN-13418</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Autofocus for jump to commit</summary>
+        <key>SRCTREEWIN-13436</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13436</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>When selecting jump to -&gt; commit... (on the right top below the settings button) the appearing window does not have an autofocus, so you can not directly pass the SHA in it.&#13;
+&#13;
+It would be nice if it would have an autofocus.</description>
+        <reporter>Robert FIEDLER</reporter>
+        <created-date>2021-02-01T07:23:29.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>SourceTree insists handling a specific repo</summary>
+        <key>SRCTREEWIN-13434</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13434</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Hi. Using SourceTree (ST) v3.1.2 (but problem exists also in the latest version).&#13;
+&#13;
+ST insists handling a specific repo upon any attempt to clone any other repo.&#13;
+&#13;
+Imagine this: You ask to clone repo A and get in return repo Z; You ask to clone repo B and again repo Z is cloned (in this case, repo Z is called "su4_pom_emv_shared") .&#13;
+&#13;
+Actions done:&#13;
+ * Uninstalled ST&#13;
+ * Shift-del folder _Atlassian_ under c:\users\&lt;user&gt;&#13;
+ * Shift-del folder _SourceTree_ under c:\users\&lt;user&gt;&#13;
+ * Searched all over in the Registry for the problematic repo. Zero results&#13;
+ * Searched all over in C: drive for suspicious files containing the name of the problematic repo. Zero results&#13;
+ * Cleared _Temp_ folder of Windows&#13;
+ * Created fresh set of SSH keys (just in case)&#13;
+&#13;
+ * Re-installed ST&#13;
+ ** With and without Mercurial (same result)&#13;
+ ** With and without keys (PuTTY / SSH) (same result)&#13;
+&#13;
+Now get this: As long as keep using ST without exiting the application, everything seems to be fine (i.e. capable to clone any repo plus even Branch, Merge, Push and Pull successfully). But once you *EXIT* the application and restart it - BOOM! it masses up (see enclosed images)&#13;
+&#13;
+I get the error-message _*fatal: refused to merge unrelated histories*_ for** _**_ no reason&#13;
+&#13;
+As a last resort I logged in Bitbucket and renamed the repo. Ever since everything got stuck.&#13;
+&#13;
+Moreover: $ git pull works fine; gitk (other git GUI) works fine&#13;
+&#13;
+Will appreciate to have any assistance to resolve this irritating problem.&#13;
+&#13;
+Thank you.&#13;
+&#13;
+Links to 3 images:&#13;
+&#13;
+[Image 1|https://drive.google.com/open?id=1mQsxgtbvVwfGUVUG8u2hefJL00io3hS2]&#13;
+&#13;
+[Image 2|https://drive.google.com/open?id=1n4U-XVm30MAaRaCdeTrw8sVjtPMlFuzH]&#13;
+&#13;
+[Image 3|https://drive.google.com/open?id=1WajxgXxZ7743bxPN4vs-0ObinQnj3UuV]&#13;
+&#13;
+ </description>
+        <reporter>Yigal Mioni</reporter>
+        <created-date>2021-01-30T14:19:36.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Links to images (Dropbox)&#13;
+&#13;
+[Image 1|https://www.dropbox.com/s/hc3oio0wvhdhla5/SourceTree%20Git%20Error%201.png?dl=0]&#13;
+&#13;
+[Image 2|https://www.dropbox.com/s/g4vsb0rfv8jxspo/SourceTree%20Git%20Error%202.png?dl=0]&#13;
+&#13;
+[Image 3|https://www.dropbox.com/s/d77mrrfppmco9vf/SourceTree%20Git%20Error%203.png?dl=0]&#13;
+&#13;
+ &#13;
+&#13;
+Clone Process log:&#13;
+&#13;
+[&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks config --global --get init.templatedir",&#13;
+ "Directory": "C:\\Users\\&lt;user&gt;\\AppData\\Local\\Temp\\",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.0100000",&#13;
+ "CallerContext": "GetGlobalConfig",&#13;
+ "Output": ""&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c filter.lfs.smudge= -c filter.lfs.required=false -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks clone --branch master https://&lt;user&gt;@bitbucket.org/&lt;company&gt;/hofim_old.git C:\\Users\\&lt;user&gt;\\Documents\\hofim_old",&#13;
+ "Directory": "C:\\Users\\&lt;user&gt;\\AppData\\Local\\Temp\\",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00.7210000",&#13;
+ "CallerContext": "GetCloneProcess",&#13;
+ "Output": "Cloning into 'C:\\Users\\&lt;user&gt;\\Documents\\hofim_old'...\nremote: Repository &lt;company&gt;/su4_pom_emv_shared not found\nfatal: repository 'https://bitbucket.org/&lt;company&gt;/su4_pom_emv_shared.git/' not found\n"&#13;
+ },&#13;
+ {&#13;
+ "Command": "git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks remote -v",&#13;
+ "Directory": "C:\\Users\\&lt;user&gt;\\AppData\\Local\\Temp\\",&#13;
+ "Status": "Finished",&#13;
+ "Duration": "00:00:00",&#13;
+ "CallerContext": "GetRemoteRepositories",&#13;
+ "Output": "fatal: not a git repository (or any of the parent directories): .git\n"&#13;
+ }&#13;
+]&#13;
+&#13;
+ </comment-text>
+                <author>Yigal Mioni</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>SourceTree disappears when using "Checkout in Sourcetree" link from Bitbucket</summary>
+        <key>SRCTREEWIN-13433</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13433</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I recently updated to SourceTree 3.4.2 and now when I try to clone a branch by clicking on a "Checkout in Sourcetree" link from our Bitbucket server, SourceTree simply disappears.  I get the normal "URL Actions" window, and when I click *Checkout* (or even *Cancel*) the application simply closes: no error message and no crash dialog.  When I re-open Sourcetree, the new branch has not been checked out.  I've been working around this by checking out the branch from the "Remotes" node in the left hand pane.&#13;
+&#13;
+Is there any kind of log file that I could provide to help debug this problem?  I looked in C:\Users\&lt;username&gt;\AppData\Local\SourceTree and did not see anything.</description>
+        <reporter>Matt Volkar</reporter>
+        <created-date>2021-01-29T13:16:41.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Duplicates SRCTREEWIN-13257</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Not able to clone repos from bit bucket using source tree</summary>
+        <key>SRCTREEWIN-13432</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13432</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I am trying to clone repos from bitbucket from sourctree, it's always ending up with below error. I and my team have tried in so many ways, but it didn't resolved. it's only happening for my account.&#13;
+&#13;
+ &#13;
+&#13;
+Command: git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks ls-remote https://NareshGarlapati@bitbucket.org/sc0p3Cr33p/factoryweb2.git&#13;
+Output:&#13;
+Error: remote: Invalid username or password&#13;
+fatal: Authentication failed for '[https://bitbucket.org/sc0p3Cr33p/factoryweb2.git/]'</description>
+        <reporter>Naresh Babu Garlapati</reporter>
+        <created-date>2021-01-28T15:22:15.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>"Run 'git lfs pull' now? is triggered on every startup</summary>
+        <key>SRCTREEWIN-13431</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13431</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>On every startup, all git LFS repositories currently open trigger this dialogue:&#13;
+&#13;
+!image-2021-01-27-13-19-57-941.png!&#13;
+&#13;
+ &#13;
+&#13;
+See this thread for other people having the issues:&#13;
+https://community.atlassian.com/t5/Sourcetree-questions/sourcetree-asks-to-download-binary-content-for-git-lfs-on-every/qaq-p/1586342</description>
+        <reporter>olmorauba</reporter>
+        <created-date>2021-01-27T12:23:21.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>I'm not sure the severity should be Minor as this bug could confuse a lot of developers on why they are needing to do a git lfs pull every time they start SourceTree. They potentially could waste many hours on tracking down an issue that isn't on their end but due to a bug in SourceTree.&#13;
+&#13;
+ &#13;
+&#13;
+ </comment-text>
+                <author>Tristan559</author>
+            </comment>
+            <comment>
+                <comment-text>This is very confusing so a fix would be graet.</comment-text>
+                <author>Michael Schmidt</author>
+            </comment>
+            <comment>
+                <comment-text>I am unable to change any details about this issue. I agree that the severity should be more than Minor, it is quite confusing, and can easily lead people down a rabbit hole of trying to fix their lfs environment, even though nothing is wrong.</comment-text>
+                <author>olmorauba</author>
+            </comment>
+            <comment>
+                <comment-text>I'm running into this issue as well. Have been going down the rabbit hole Olmorauba mentioned for a few hours now before finding this bug report. Please bump the severity of this. </comment-text>
+                <author>Steve Zapata</author>
+            </comment>
+            <comment>
+                <comment-text>Duplicates 13418</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Got the same problem. Appeared right after installing 3.4.2</comment-text>
+                <author>Klaus Jensen Jaatog</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Custom action parameter $BRANCH not always properly replaced</summary>
+        <key>SRCTREEWIN-13430</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13430</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Hi.&#13;
+&#13;
+I am making a simple custom action to push to Gerrit.&#13;
+&#13;
+$BRANCH is not replaced properly in parameter field if not preceded by a space.&#13;
+&#13;
+I need to have as a parameter to the git command:&#13;
+&#13;
+push origin HEAD:refs/for/$BRANCH&#13;
+&#13;
+Thanks&#13;
+&#13;
+Jean-Luc</description>
+        <reporter>Jean-Luc Basso</reporter>
+        <created-date>2021-01-26T13:17:12.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Unable to clone a repository</summary>
+        <key>SRCTREEWIN-13429</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13429</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I am unable to clone a repository with in SouceTree.  I am able to clone a repository via the command line successfully, but not able to do so in the SourceTree application.  Here is the command line that we use for a successful clone:&#13;
+&#13;
+git.exe clone [https://crhodes@bitbucket.org/nemours/lawson.git]&#13;
+&#13;
+In SourceTree I can see all of the repositories, but I can not able to clone them in the app.  Do you have any suggestions or thoughts on how this can be resolved.</description>
+        <reporter>crhodes</reporter>
+        <created-date>2021-01-22T21:13:07.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>What is the error you're getting, can you share some screenshots?</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Hi Apoorv,&#13;
+&#13;
+I am getting the following messaage when we try to clone a repository.&#13;
+&#13;
+Command: git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks ls-remote https://crhodes@bitbucket.org/nemours/lawson.git&#13;
+Output: &#13;
+Error: remote: Invalid username or password&#13;
+fatal: Authentication failed for 'https://bitbucket.org/nemours/lawson.git/'&#13;
+&#13;
+ I am using the correct username and password for my account.  So I do not understand why the cloning process is not allowing me to clone the repository in SourceTree.  </comment-text>
+                <author>crhodes</author>
+            </comment>
+            <comment>
+                <comment-text>Seems that your repo doesn't support basic authentication(id-pwd) and needs OAuth.&#13;
+Go to Remote tab and add your Bitbucket account there. Then try to clone</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Apoorv,&#13;
+&#13;
+I checked Tools then Authentication and edited account and my Credentials Authentication is set to OAuth.  I tried to run the clone again and I am still getting the same error message.</comment-text>
+                <author>crhodes</author>
+            </comment>
+            <comment>
+                <comment-text>Hey [~01dde3181514]&#13;
+&#13;
+In your remote tab, select your added account and refresh the list of repositories. Are you able to locate your repo there?&#13;
+&#13;
+ </comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Apoorv,&#13;
+&#13;
+I tried that and I get a message "An Account already exists for 'crhodes@bitbucket.org".  I do not believe I want o create another account.</comment-text>
+                <author>crhodes</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Pair Programming Note In Commit</summary>
+        <key>SRCTREEWIN-13428</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13428</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>My company asks us to add a line in our commit message when we pair with another developer on a commit. We use Pluralsight Flow to scan our commits and provide metrics on developer productivity, collaboration, and knowledge sharing. It would be nice if Sourcetree had a way to append this line to commit messages for me so I don't have to type it out. The format we use is listed below.&#13;
+&#13;
+Co-authored-by: \{name} &lt;\{email}&gt;</description>
+        <reporter>Trevor Tubbs</reporter>
+        <created-date>2021-01-22T17:07:59.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Launching SourceTree getting"Run  'git lfs pull' now" prompt</summary>
+        <key>SRCTREEWIN-13427</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13427</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Since updating to 3.4.2, I typically receive this popup when launching Sourcetree&#13;
+&#13;
+!image-2021-01-21-14-53-57-608.png|width=466,height=194!&#13;
+&#13;
+(Run 'git lfs pull' now?  The repository .. is using Gif LFS but it appears the binary content hasn't been downloaded yet.  Do you want to download the LFS files required by your current checkout?)&#13;
+&#13;
+I seem to get this every time I launch SourceTree, even if nothing has changed (and everything is already downloaded and\or clicking "yes", etc.)</description>
+        <reporter>John Mitchell</reporter>
+        <created-date>2021-01-21T14:56:23.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Duplicated by 13418</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Changing the remote repository path of project causes SourceTree to crash</summary>
+        <key>SRCTREEWIN-13426</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13426</url>
+        <issue-type>N/A</issue-type>
+        <priority>High</priority>
+        <description>When changing te remote repository path through Settings &gt; Remotes &gt; Edit, SourceTree crashes after a short while (10 - 30 secs).</description>
+        <reporter>Alwin Drenth</reporter>
+        <created-date>2013-12-16T07:42:19.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Hi Alwin,&#13;
+&#13;
+Could you attach the crash report that happens along with when SourceTree crashes?&#13;
+&#13;
+Thanks in advance</comment-text>
+                <author>KieranA</author>
+            </comment>
+            <comment>
+                <comment-text>Thanks for that Alwin, I've upped the severity of it as it's blocking you from doing something you should be able to do. We'll be taking a look into this today.&#13;
+&#13;
+Thanks again</comment-text>
+                <author>KieranA</author>
+            </comment>
+            <comment>
+                <comment-text>I've reported the same issue here -https://support.atlassian.com/plugins/servlet/mobile#issue/STSP-910 in that bug I've attached my error log and repo steps.</comment-text>
+                <author>wgorgichuk</author>
+            </comment>
+            <comment>
+                <comment-text>Just as a side note, in this case if you were to completely delete the remote and re-add it, it should technically work. Regardless of this though, we endeavour to get this issue fixed.&#13;
+&#13;
+Cheers</comment-text>
+                <author>KieranA</author>
+            </comment>
+            <comment>
+                <comment-text>Hi!&#13;
+The bug still there. Please see the crashlog [^crashlog-editRepoUrl.txt] &#13;
+HTH</comment-text>
+                <author>Stephen Nguyen</author>
+            </comment>
+            <comment>
+                <comment-text>(i) Hi Team, I'm experiencing the same issue when using either version 3.3.9, 3.4.1, or 3.4.2.&#13;
+&#13;
+(on) Note: I'm using the Windows version, so I've created a separate ticket to track the fix for Windows. (See SRCTREEWIN-13417).</comment-text>
+                <author>Miles Buckton</author>
+            </comment>
+            <comment>
+                <comment-text>13417</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>SourceTree Returns Incomplete &amp; Inaccurate List of Repositories from Bitbucket Server</summary>
+        <key>SRCTREEWIN-13424</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13424</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I just upgraded Sourcetree to the enterprise version 3.4.1 and when viewing Remote repositories it is not showing all the remote Bitbucket server repos I have access to. The new feature of the Project dropdown list seems to not be functioning correctly and is sometimes not showing any of the repositories that exist in a Project or it is showing repos that exist in other projects.&#13;
+&#13;
+For example I have selected the project AP from the dropdown.&#13;
+!image-2021-01-19-12-41-13-234.png!&#13;
+&#13;
+However the list of repositories that is returned is completely random with none of the repos from the actual AP Bitbucket project being listed but repositories from other Bitbucket projects being listed, such as as repo call test_repo in the ALM project shows up.&#13;
+&#13;
+I am currently using Git for windows system version 2.29.2 and have tried with LibGit2 disabled and enabled an both produce the same issue.&#13;
+!image-2021-01-19-12-44-59-221.png!&#13;
+&#13;
+We are currently connecting to Bitbucket Server version 7.6.0.</description>
+        <reporter>trent-dailey</reporter>
+        <created-date>2021-01-19T18:46:43.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Sourcetree asks to select a Credential Helper and doesn't clone</summary>
+        <key>SRCTREEWIN-13423</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13423</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>After creating a remote repository for GitLab CE host with Authentication OK, when trying to clone the repository, it opens a window asking to select a Credential Helper. No matter what Credential Helper we select, this windows keeps opening again and again after selecting.&#13;
+&#13;
+PS: We have already speak with Matej Vitez &lt;matej.vitez@pricefx.com&gt;</description>
+        <reporter>Hugo Filipe Pereira</reporter>
+        <created-date>2021-01-18T14:16:15.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Vary folder icon if it contains changed/untracked/etc. files</summary>
+        <key>SRCTREEWIN-13422</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13422</url>
+        <issue-type>N/A</issue-type>
+        <priority>N/A</priority>
+        <description>When you choose to show all files in SourceTree, the icon for the "clean" folders and folders with pending changes (modified/untracked/etc.) is the same. Therefore, the user should expand the folders one by one manually to check if there is anything to add/commit there.&#13;
+&#13;
+The folders containing changes should have a slightly different icon so they are identified easily (similar to P4V).</description>
+        <reporter>Behzad A Monfared</reporter>
+        <created-date>2021-01-18T14:05:43.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Prompted to download GIT LFS everytime I open SourceTree 3.4.2</summary>
+        <key>SRCTREEWIN-13421</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13421</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>SourceTree Windows updated yesterday to 3.4.2, now everytime I open the app I get prompted to download Git LFS for every repository. &#13;
+&#13;
+ &#13;
+&#13;
+Version is 3.4.2 which is not listed in Jira as an option.</description>
+        <reporter>Neal Culiner</reporter>
+        <created-date>2021-01-16T15:26:22.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>13418</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Sourcetree crashes upon cloning a repository</summary>
+        <key>SRCTREEWIN-13420</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13420</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>All the latest versions for sourcetree (3.3.9 onwards) crash when I clone a repository. The cloning procedure completes successfully but then sourcetree crashes while adding the branch for the project etc. </description>
+        <reporter>Saqlain Ali</reporter>
+        <created-date>2021-01-18T08:10:53.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>This is complete error report thrown after source tree crashes&#13;
+&#13;
+ &#13;
+&#13;
+System.ObjectDisposedException&#13;
+ HResult=0x80131622&#13;
+ Message=Cannot access a disposed object.&#13;
+ Source=System.Reactive&#13;
+ StackTrace:&#13;
+ at System.Reactive.Subjects.Subject`1.ThrowDisposed() in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Subjects\Subject.cs:line 64&#13;
+ at System.Reactive.SynchronizedObserver`1.OnNextCore(T value) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\SynchronizedObserver.cs:line 22&#13;
+ at System.Reactive.ObserverBase`1.OnNext(T value) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\ObserverBase.cs:line 36&#13;
+ at ReactiveUI.ReactiveCommand`2.&lt;Execute&gt;b__18_3() in d:\a\1\s\src\ReactiveUI\ReactiveCommand\ReactiveCommand.cs:line 716&#13;
+ at System.Reactive.Linq.ObservableImpl.Finally`1._.Run(IObservable`1 source) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Linq\Observable\Finally.cs:line 52&#13;
+ at System.Reactive.Producer`2.SubscribeRaw(IObserver`1 observer, Boolean enableSafeguard) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\Producer.cs:line 128&#13;
+ at System.Reactive.Linq.ObservableImpl.AsObservable`1.Run(_ sink) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Linq\Observable\AsObservable.cs:line 20&#13;
+ at System.Reactive.Producer`2.SubscribeRaw(IObserver`1 observer, Boolean enableSafeguard) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\Producer.cs:line 128&#13;
+ at System.Reactive.Subjects.ConnectableObservable`2.Connect() in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Subjects\ConnectableObservable.cs:line 44&#13;
+ at System.Reactive.Linq.ObservableImpl.RefCount`1.Eager._.Run() in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Linq\Observable\RefCount.cs:line 85&#13;
+ at System.Reactive.Producer`2.SubscribeRaw(IObserver`1 observer, Boolean enableSafeguard) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\Producer.cs:line 128&#13;
+ at System.Reactive.Concurrency.ObserveOn`1.Scheduler.Run(ObserveOnObserverNew`1 sink) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Concurrency\Synchronization.ObserveOn.cs:line 28&#13;
+ at System.Reactive.Producer`2.SubscribeRaw(IObserver`1 observer, Boolean enableSafeguard) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\Producer.cs:line 128&#13;
+ at System.Reactive.TailRecursiveSink`1.Drain() in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\TailRecursiveSink.cs:line 126&#13;
+ at System.Reactive.TailRecursiveSink`1.Run(IEnumerable`1 sources) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\TailRecursiveSink.cs:line 33&#13;
+ at System.Reactive.Concurrency.Scheduler.&lt;&gt;c__75`1.&lt;ScheduleAction&gt;b__75_0(IScheduler _, ValueTuple`2 tuple) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Concurrency\Scheduler.Simple.cs:line 65&#13;
+ at System.Reactive.Concurrency.CurrentThreadScheduler.Schedule[TState](TState state, TimeSpan dueTime, Func`3 action) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Concurrency\CurrentThreadScheduler.cs:line 107&#13;
+ at System.Reactive.Concurrency.LocalScheduler.Schedule[TState](TState state, Func`3 action) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Concurrency\LocalScheduler.cs:line 32&#13;
+ at System.Reactive.Concurrency.Scheduler.ScheduleAction[TState](IScheduler scheduler, TState state, Action`1 action) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Concurrency\Scheduler.Simple.cs:line 61&#13;
+ at System.Reactive.Producer`2.SubscribeRaw(IObserver`1 observer, Boolean enableSafeguard) in D:\a\1\s\Rx.NET\Source\src\System.Reactive\Internal\Producer.cs:line 128&#13;
+ at ReactiveUI.ReactiveCommandBase`2.ICommandExecute(Object parameter) in d:\a\1\s\src\ReactiveUI\ReactiveCommand\ReactiveCommandBase.cs:line 230&#13;
+ at MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated)&#13;
+ at System.Windows.Controls.Primitives.ButtonBase.OnClick()&#13;
+ at System.Windows.Controls.Button.OnClick()&#13;
+ at System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#13;
+ at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#13;
+ at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#13;
+ at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#13;
+ at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#13;
+ at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#13;
+ at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#13;
+ at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#13;
+ at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#13;
+ at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#13;
+ at System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)&#13;
+ at System.Windows.Input.InputManager.ProcessStagingArea()&#13;
+ at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#13;
+ at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#13;
+ at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#13;
+ at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#13;
+ at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#13;
+ at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#13;
+ at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#13;
+ at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)&#13;
+ at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)&#13;
+ at System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)&#13;
+ at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)&#13;
+ at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG&amp; msg)&#13;
+ at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)&#13;
+ at System.Windows.Application.RunDispatcher(Object ignore)&#13;
+ at System.Windows.Application.RunInternal(Window window)&#13;
+ at SourceTree.App.Main()&#13;
+&#13;
+This exception was originally thrown at this call stack:&#13;
+ [External Code]</comment-text>
+                <author>Saqlain Ali</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>External difftool extremely slow</summary>
+        <key>SRCTREEWIN-13419</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13419</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>For some reason using sourcetree with external diff tool can be extremely slow sometimes.&#13;
+&#13;
+Waiting for more than a minute and still no response. &#13;
+&#13;
+ &#13;
+&#13;
+This happened to me with BeyondCompare, meld,  winmerge and I think I've attempted a few others as well. Not once did this issue happened to me with when I used Pycharm with Git and BeyondCompare. &#13;
+&#13;
+ &#13;
+&#13;
+You should reopen this issue as *THIS IS A BUG*&#13;
+&#13;
+https://jira.atlassian.com/browse/SRCTREEWIN-1413</description>
+        <reporter>or</reporter>
+        <created-date>2021-01-17T17:05:11.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>LFS file download prompt every time I launch Sourcetree since update to v3.4.2</summary>
+        <key>SRCTREEWIN-13418</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13418</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>I have 2 repos open that use LFS. Every time I launch Sourcetree since updating to v3.4.2 I gat two prompts to download LFS files.&#13;
+&#13;
+!image-2021-01-14-09-17-18-155.png!&#13;
+&#13;
+Every time I click Yes, the pull appears to be successful, but I get the same prompt again next time I launch. This did not happen prior to v3.4.2.&#13;
+&#13;
+ </description>
+        <reporter>Alan Cordner</reporter>
+        <created-date>2021-01-14T16:18:53.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>This issue is no longer a minor priority. It has become critical for me because I am unable to push any LFS updates to origin in my repo! I get an authentication error:&#13;
+&#13;
+ &#13;
+&#13;
+_Uploading LFS objects: 0% (0/1), 0 B | 0 B/s, done._&#13;
+ _batch response: Authorization error: [https://xxxxxx@bitbucket.org/xxxx/xxxxxxx.git/info/lfs/objects/batch_]&#13;
+ _Check that you have proper access to the repository_&#13;
+&#13;
+ &#13;
+&#13;
+I am trying to build a new release of my application and I am unable to because I cannot push my changes to master!</comment-text>
+                <author>Alan Cordner</author>
+            </comment>
+            <comment>
+                <comment-text>To get around this issue, I have reverted to v3.4.1</comment-text>
+                <author>Alan Cordner</author>
+            </comment>
+            <comment>
+                <comment-text>We're working on it, a fix should be available in the next release soon.&#13;
+You can join the beta program for frequent releases&#13;
+https://groups.google.com/g/atlassian-sourcetree-beta</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>It might be helpful to have GIT-LFS  / use a test repo with LFS as part of testing before the app is rolled out if it isn't already.</comment-text>
+                <author>Tristan559</author>
+            </comment>
+            <comment>
+                <comment-text>A beta version with the fix for this issue has been released here:&#13;
+[https://product-downloads.atlassian.com/software/sourcetree/windows/beta/SourceTreeSetup-3.4.3-beta-1.exe]&#13;
+Please verify.&#13;
+Thanks</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>For me it asked only once again per repo/submodule. After that it didn't ask again.</comment-text>
+                <author>Robert FIEDLER</author>
+            </comment>
+            <comment>
+                <comment-text>Looks good to me.&#13;
+&#13;
+Still I would wish to have added checkboxes "do not show again" for all those implicitly started tasks when opening a repo.</comment-text>
+                <author>janfellner</author>
+            </comment>
+            <comment>
+                <comment-text>fixed in 3.4.3</comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Changing the remote repository path of project causes SourceTree to crash</summary>
+        <key>SRCTREEWIN-13417</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13417</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>When changing the remote repository path through Settings &gt; Remotes &gt; Edit, SourceTree crashes after a short while (10 - 30 secs).</description>
+        <reporter>Miles Buckton</reporter>
+        <created-date>2021-01-14T07:08:30.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>(i) Hi Team, I'm experiencing the same issue when using either version 3.3.9, 3.4.1, or 3.4.2.</comment-text>
+                <author>Miles Buckton</author>
+            </comment>
+            <comment>
+                <comment-text>We're also experiencing this issue with SourceTree 3.4.2 for Windows.  Tried with both embedded Git 2.29.2 and system Git version 2.30.1.&#13;
+&#13;
+Client is running Windows 10 Pro 64-bit, Version 1909, OS build 18363.1316.&#13;
+&#13;
+Client is configured to authenticate with repos at Bitbucket.org and repos on locally hosted Bitbucket Server 5.11.  Existing cloned repos for both servers locations are functional.&#13;
+&#13;
+Error is:&#13;
+&#13;
+??The exception unknown software exception (0xe0434352) occurred in the application at location 0x00007FFABF533B29.??&#13;
+&#13;
+Output form %LocalAppData%\Atlassian\SourceTree\sourcetree.log (all but the last two log messages occur when sourceTree launched; last two when I create a new tab and click Remote):&#13;
+&#13;
+ERROR [2021-02-10 09:27:33,686] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,729] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,736] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,741] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,745] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,750] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:33,756] [1] [SourceTree.Model.Repository] [Log] - Repository: [] does not exist&#13;
+ ERROR [2021-02-10 09:27:54,133] [1] [SourceTree.Exceptions.RemoteHostException] [Log] - Insufficient authentication credentials&#13;
+ ERROR [2021-02-10 09:27:54,143] [1] [SourceTree.Exceptions.RemoteHostException] [Log] - Failed to list teams for user [USERNAME_REMOVED]&#13;
+&#13;
+ </comment-text>
+                <author>Kris DeMuth</author>
+            </comment>
+            <comment>
+                <comment-text>A beta version with the fix for this issue has been released here:&#13;
+[https://product-downloads.atlassian.com/software/sourcetree/windows/beta/SourceTreeSetup-3.4.3-beta-1.exe]&#13;
+Please verify.&#13;
+Thanks</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Verified Remote tab works in 3.4.3-beta-1.</comment-text>
+                <author>Kris DeMuth</author>
+            </comment>
+            <comment>
+                <comment-text>Fixed in 3.4.3 version</comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+            <comment>
+                <comment-text>It works perfectly in 3.4.3. Thank you so much for the fix. :) (y)</comment-text>
+                <author>Miles Buckton</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Unable to create pull request</summary>
+        <key>SRCTREEWIN-13416</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13416</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Since installing version 3.4.2 of Sourcetree for Windows, I am not able to create pull requests.&#13;
+&#13;
+My previous version of Sourcetree was 3.3.9, so I don't know where the problem started.&#13;
+&#13;
+I have tried uninstalling Sourcetree completely and reinstalling it, but the problem still persist.&#13;
+&#13;
+This is a problem similar to the one reported here https://jira.atlassian.com/browse/SRCTREEWIN-12482 but this time the workaround doesn't work any more.</description>
+        <reporter>alondono</reporter>
+        <created-date>2021-01-14T00:47:10.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Use 12482</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Troubles accessing REMOTES/origin</summary>
+        <key>SRCTREEWIN-13415</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13415</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>* SSO/SAML enablement was completed recently&#13;
+ * after that, though all the steps to use OAuth/token seem to be properly followed and msg of "Authentication OK" is shown, the following (or similar) message is seen every time I am trying to access Remotes by, say, using push/fetch/etc:&#13;
+&#13;
+_{color:#1f3864}remote: The `GenslerAppsPod' organization has enabled or enforced SAML SSO. To access{color}_&#13;
+&#13;
+_{color:#1f3864}remote: this repository, you must use the HTTPS remote with a personal access token{color}_&#13;
+&#13;
+_{color:#1f3864}remote: or SSH with an SSH key and passphrase{color}_&#13;
+&#13;
+_{color:#1f3864}remote: that has been authorized for this organization. Visit{color}_&#13;
+&#13;
+_{color:#1f3864}remote: [https://docs.github.com/articles/authenticating-to-a-github-organization-with-saml-single-sign-on/] for more information.{color}_&#13;
+&#13;
+ _{color:#1f3864}{color}_ &#13;
+&#13;
+ _{color:#1f3864}{color}_ &#13;
+&#13;
+_{color:#1f3864}fatal: unable to access 'https://boris-tiokhin-gensler@github.com/GenslerAppsPod/data-SQLDeployment.git/': The requested URL returned error: 403{color}_&#13;
+&#13;
+_{color:#1f3864}Completed with errors, see above.{color}_</description>
+        <reporter>Boris Tiokhin</reporter>
+        <created-date>2021-01-13T21:06:09.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>git-svn support does not work</summary>
+        <key>SRCTREEWIN-13413</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13413</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>Using git-svn for clone, fetch ect. does not work. I never tried this before, but according to Blogposts for Version 1.4 a while ago git-svn at least was supported.&#13;
+&#13;
+When I enter the URL, I'm asked for credentials and authentication works. After that Sourcetree tells me that it is no valid URL. Details show these error:&#13;
+&#13;
+ &#13;
+{code:java}&#13;
+Command: git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks ls-remote &lt;myrepo&gt;&#13;
+Output:&#13;
+Error: fatal: repository '&lt;myrepo&gt;' not found&#13;
+Command: perl.exe &lt;SourceTree-InstallPath&gt;\tools\svn.pl info &lt;myrepo&gt;&#13;
+Output:&#13;
+Error: System.ComponentModel.Win32Exception: The system cannot find the specified file&#13;
+{code}&#13;
+ &#13;
+&#13;
+Trying to install perl did not help and had no effect on these errors.&#13;
+&#13;
+ &#13;
+&#13;
+I performed the clone command on git bash and it worked. I could add the cloned repository to Sourcetree, performing a pull or fetch does not work. Sourcetree seems to hang on the authentication:&#13;
+{code:java}&#13;
+git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks svn fetch&#13;
+Authentication realm: &lt;myrepo&gt; VisualSVN Server{code}</description>
+        <reporter>D B</reporter>
+        <created-date>2021-01-11T10:54:41.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Ah, I forgot to mention that after performing the git-svn clone via git bash all operations seem to work with TortoiseGit. (First try to clone with tortoiseGit didn't work as well, because it did some steps (I later recognized these in the git bash output) and after a while it said "Work is done" but the folder was empty.)&#13;
+&#13;
+So there seems no problem with my git installation itself.</comment-text>
+                <author>D B</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Rebase children of &lt;commit&gt; interactively... no longer works as before</summary>
+        <key>SRCTREEWIN-13411</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13411</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>When you right click on a commit in the history view, and then select the Rebase children of &lt;commit&gt; interactively... context menu option: the view pops up, but it doesn't show the available commits that you want to squash, or the buttons that allow you to edit the final commit message etc.&#13;
+&#13;
+Also, the Full Output contains a K in the prefix, and a space before the full stop. See below:&#13;
+&#13;
+[KSuccessfully rebased and updated .</description>
+        <reporter>Miles Buckton</reporter>
+        <created-date>2021-01-08T12:34:43.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>(i) This works fine in version 3.3.9, but is broken in version 3.4.0 and 3.4.1.</comment-text>
+                <author>Miles Buckton</author>
+            </comment>
+            <comment>
+                <comment-text>Please try out the beta release with this fix and let us know your observations.&#13;
+Release Notes: [https://product-downloads.atlassian.com/software/sourcetree/windows/beta/ReleaseNotes_3.4.2-beta-1.html]&#13;
+&#13;
+Beta release: [https://product-downloads.atlassian.com/software/sourcetree/windows/beta/SourceTreeSetup-3.4.2-beta-1.exe]</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+            <comment>
+                <comment-text>Hi Apoorv, thank you for your response. :) Yes, the fix in the beta release works fine for me. Thank you. (y)</comment-text>
+                <author>Miles Buckton</author>
+            </comment>
+            <comment>
+                <comment-text>We have had the same problem since the latest updates.&#13;
+&#13;
+I can also confirm that the 3.4.2 beta linked by @Apoorv Singhal fixes the issue.</comment-text>
+                <author>Kalle Kromann</author>
+            </comment>
+            <comment>
+                <comment-text>Fixed in 3.4.2&#13;
+&#13;
+ </comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Unable to create pull request on bitbucket server</summary>
+        <key>SRCTREEWIN-13409</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13409</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>SourceTree for Windows &#13;
+&#13;
+after update to 3.4.1 unable to create pull request - says that&#13;
+&#13;
+WTF? I use Atlasian Bitbucket server, WHY this stuff is broken from version to version of SourceTree????&#13;
+&#13;
+"[Window Title]&#13;
+Remote project configuration&#13;
+&#13;
+[Content]&#13;
+You don't have any remotes which have extended integration settings configured; you need to edit your remotes to add details such as the hosting type and base URL. Click the Settings button to open your remote list.&#13;
+&#13;
+[Settings] [Cancel]"</description>
+        <reporter>IgorShtanko</reporter>
+        <created-date>2021-01-06T10:21:39.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>-Same here, works fine with v3.3.9.-&#13;
+&#13;
+Don't know why, but this comment was supposed to be [here|https://jira.atlassian.com/browse/SRCTREEWIN-13391] … sorry for the noise.</comment-text>
+                <author>beatngu13</author>
+            </comment>
+            <comment>
+                <comment-text>Refer 12482</comment-text>
+                <author>Apoorv Singhal</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Problems with Bitbucket Server Integration in Sourcetree Enterprise</summary>
+        <key>SRCTREEWIN-13406</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13406</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>When using "Clone in Sourcetree" from git repository in Bitbucket Server then following is saved in Remote Details:&#13;
+Remote Account: Generic Account Generic Host&#13;
+Legacy Account Settings: &#13;
+  Host Type: Bitbucket Server&#13;
+  Host Root Url: filled&#13;
+  Username: filled&#13;
+ # When closing and reopening Sourcetree all entries in Legacy Account Settings and remote icon in the toolbar contains a exclamation mark. Without this information "Checkout in Sourcetree" from an branch does not find the local repository.&#13;
+ # After entering all the information again I try "Checkout in Sourcetree" again from an branch. The local repository is found now. But when I press the button "Checkout", Sourcetree crashes</description>
+        <reporter>Torsten Kleiber</reporter>
+        <created-date>2021-01-05T10:43:46.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>Have tested against Bitbucket Server 7.9 and 6.10.</comment-text>
+                <author>Torsten Kleiber</author>
+            </comment>
+        </comments>
+    </issue>
+    <issue>
+        <summary>Remote project configuration error when creating a Pull Request after starting app</summary>
+        <key>SRCTREEWIN-13405</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13405</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>h3. Issue Summary&#13;
+I receive this error message any time I try to create a Pull Request after starting the app. I've tried all online fixes but this is definitely a bug.</description>
+        <reporter>Kate Clark</reporter>
+        <created-date>2021-01-05T05:16:46.000+0000</created-date>
+        <comments/>
+    </issue>
+    <issue>
+        <summary>Unable to Open Web Browser Error Message</summary>
+        <key>SRCTREEWIN-13404</key>
+        <url>https://jira.atlassian.com/browse/SRCTREEWIN-13404</url>
+        <issue-type>N/A</issue-type>
+        <priority>Low</priority>
+        <description>When I start Soucretree I am faced with a warning sign on the 'Remote'  icon. I click on it and I am faced with the error message "Unable to open your web browser to 'git@vcs.....', do you have a default web browser set?" &#13;
+&#13;
+I have tried the methods on the internet:&#13;
+To click cance, go to settings, click the remote, don't change anything, click OK, then click OK again.&#13;
+&#13;
+The warning exclamation mark is still there. </description>
+        <reporter>Rachel Tham</reporter>
+        <created-date>2021-01-05T00:56:59.000+0000</created-date>
+        <comments>
+            <comment>
+                <comment-text>[~5caa6f03d09f] , Do you have any default web browser set in your system? &#13;
+&#13;
+ </comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+            <comment>
+                <comment-text>[~5caa6f03d09f] , Do you have any default web browser set in your system? &#13;
+&#13;
+ </comment-text>
+                <author>Anphy Jose</author>
+            </comment>
+            <comment>
+                <comment-text>My default browser is microsoft edge</comment-text>
+                <author>Rachel Tham</author>
+            </comment>
+            <comment>
+                <comment-text>[~anphy.jose] </comment-text>
+                <author>Rachel Tham</author>
+            </comment>
+        </comments>
+    </issue>
+</issues>
