@@ -14,4 +14,4 @@ Written in a way that you can easily select the type of output (either XML or JS
 * JUnit 5
 * SLF4J 1.8.0-beta2
 
-
+ 
