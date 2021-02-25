@@ -6,7 +6,7 @@ import org.json.JSONObject;
 
 import static fetcher.common.Constants.EMPTY;
 
-public class IssueFieldExtractor {
+public class IssueFieldGetter {
 
     public static String getFieldName(JSONObject jsonObject, Attribute name) {
 

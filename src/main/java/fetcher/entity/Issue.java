@@ -1,8 +1,9 @@
-package fetcher.model;
+package fetcher.entity;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @XmlRootElement(name = "issue")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -105,4 +106,24 @@ public class Issue {
         this.comments = comments;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Issue)) return false;
+        Issue issue = (Issue) o;
+        return Objects.equals(summary, issue.summary) &&
+                Objects.equals(key, issue.key) &&
+                Objects.equals(url, issue.url) &&
+                Objects.equals(issueType, issue.issueType) &&
+                Objects.equals(priority, issue.priority) &&
+                Objects.equals(description, issue.description) &&
+                Objects.equals(reporter, issue.reporter) &&
+                Objects.equals(createdDate, issue.createdDate) &&
+                Objects.equals(comments, issue.comments);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(summary, key, url, issueType, priority, description, reporter, createdDate, comments);
+    }
 }

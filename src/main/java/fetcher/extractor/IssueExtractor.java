@@ -1,15 +1,15 @@
 package fetcher.extractor;
 
-import fetcher.model.Comment;
-import fetcher.model.Issue;
-import fetcher.model.IssueContainer;
+import fetcher.entity.Comment;
+import fetcher.entity.Issue;
+import fetcher.entity.IssueContainer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
 
 import static fetcher.common.Attribute.*;
-import static fetcher.util.IssueFieldExtractor.*;
+import static fetcher.util.IssueFieldGetter.*;
 import static fetcher.common.Constants.SERVER;
 
 public class IssueExtractor implements Extractor<IssueContainer, Issue> {

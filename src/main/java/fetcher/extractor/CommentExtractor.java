@@ -1,6 +1,6 @@
 package fetcher.extractor;
 
-import fetcher.model.Comment;
+import fetcher.entity.Comment;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static fetcher.common.Attribute.*;
-import static fetcher.util.IssueFieldExtractor.getFieldName;
-import static fetcher.util.IssueFieldExtractor.getFieldValue;
+import static fetcher.util.IssueFieldGetter.getFieldName;
+import static fetcher.util.IssueFieldGetter.getFieldValue;
 
 public class CommentExtractor implements Extractor<List<Comment>, Comment> {
 

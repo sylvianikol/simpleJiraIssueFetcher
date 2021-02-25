@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class InputReaderImpl implements InputReader {
+public class ConsoleReader implements InputReader {
     private final BufferedReader reader;
 
-    public InputReaderImpl() {
+    public ConsoleReader() {
         this.reader = new BufferedReader(new InputStreamReader(System.in));
     }
 

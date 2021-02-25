@@ -12,7 +12,6 @@ public class HttpManager {
 
     private HttpClient client;
     private HttpRequest request;
-    private HttpResponse<String> response;
 
     public HttpManager() {
         this.buildHttpClient();

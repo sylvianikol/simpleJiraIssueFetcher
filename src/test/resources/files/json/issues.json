@@ -1,0 +1,16 @@
+{
+  "summary": "testSummary",
+  "key": "testKey",
+  "url": "http://test",
+  "issueType": "testIssueType",
+  "priority": "testPriority",
+  "description": "testDescription",
+  "reporter": "testReporter",
+  "createdDate": "testDate",
+  "comments": [
+    {
+      "commentText": "testComment",
+      "author": "testAuthor"
+    }
+  ]
+}

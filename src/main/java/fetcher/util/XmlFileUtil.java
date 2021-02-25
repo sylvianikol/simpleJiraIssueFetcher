@@ -1,6 +1,6 @@
 package fetcher.util;
 
-import fetcher.model.IssueContainer;
+import fetcher.entity.IssueContainer;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

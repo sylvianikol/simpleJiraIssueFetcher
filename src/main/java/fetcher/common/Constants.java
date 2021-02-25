@@ -29,5 +29,6 @@ public class Constants {
 
     public static final String FILETYPE_INVALID = "Invalid filetype!";
 
-
+    public static final String ENTER_INPUT = "Enter a file type (xml/json): ";
+    public static final String INPUT_INVALID = "Allowed file types are xml/json. Try again: ";
 }

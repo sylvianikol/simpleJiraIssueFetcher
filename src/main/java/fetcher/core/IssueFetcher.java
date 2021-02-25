@@ -4,10 +4,12 @@ import fetcher.extractor.Extractor;
 import fetcher.extractor.IssueExtractor;
 import fetcher.common.FileType;
 import fetcher.http.HttpManager;
+import fetcher.io.ConsoleWriter;
 import fetcher.io.InputReader;
-import fetcher.io.InputReaderImpl;
-import fetcher.model.Issue;
-import fetcher.model.IssueContainer;
+import fetcher.io.ConsoleReader;
+import fetcher.entity.Issue;
+import fetcher.entity.IssueContainer;
+import fetcher.io.OutputWriter;
 import fetcher.util.FileUtil;
 import fetcher.util.JsonFileUtil;
 import fetcher.util.XmlFileUtil;
@@ -32,11 +34,13 @@ public class IssueFetcher implements Fetcher {
     private final Extractor<IssueContainer, Issue> extractor;
     private FileUtil fileUtil;
     private final InputReader reader;
+    private final OutputWriter writer;
 
     public IssueFetcher() {
         this.httpManager = new HttpManager();
         this.extractor = new IssueExtractor();
-        this.reader = new InputReaderImpl();
+        this.reader = new ConsoleReader();
+        this.writer = new ConsoleWriter();
     }
 
     @Override
@@ -87,7 +91,7 @@ public class IssueFetcher implements Fetcher {
 
     private FileType readFileType() {
         FileType fileType = FileType.OTHER;
-        System.out.println("Enter a file type (xml/json): ");
+        this.writer.writeLine(ENTER_INPUT);
 
         while (fileType == FileType.OTHER) {
 
@@ -97,7 +101,7 @@ public class IssueFetcher implements Fetcher {
                 || input.equals(FileType.XML.toString())) {
                 fileType = FileType.valueOf(input);
             } else {
-                System.out.println("Allowed file types are xml/json. Try again: ");
+                System.out.println(INPUT_INVALID);
             }
         }
 

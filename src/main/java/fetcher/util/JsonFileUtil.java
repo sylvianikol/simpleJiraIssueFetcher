@@ -2,7 +2,7 @@ package fetcher.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import fetcher.model.IssueContainer;
+import fetcher.entity.IssueContainer;
 
 import java.io.Writer;
 import java.nio.file.Files;

@@ -1,6 +1,44 @@
 {
   "issues": [
     {
+      "summary": "support clone SVN in Windows",
+      "key": "SRCTREEWIN-13476",
+      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13476",
+      "issueType": "N/A",
+      "priority": "N/A",
+      "description": "It need perl.exe.\r\n\r\nperl.exe and other in C:\\Program Files\\Git\\usr\\bin\r\n\r\n \r\n\r\n \r\n\r\nI try mkdir C:\\Program Files\\Git\\usr\\path_bin and set systemPath, and copy file:\r\n * msys-2.0.dll\r\n * msys-crypt-0.dll\r\n * msys-perl5_32.dll\r\n * perl.exe\r\n\r\nit show\r\n\r\n \r\n{code:java}\r\nCan\u0027t load \u0027/usr/lib/perl5/vendor_perl/auto/SVN/_Core/_Core.dll\u0027 for module SVN::_Core: No such file or directory at /usr/lib/perl5/core_perl/DynaLoader.pm line 193.\r\n at /usr/lib/perl5/vendor_perl/SVN/Base.pm line 59.\r\nBEGIN failed--compilation aborted at /usr/lib/perl5/vendor_perl/SVN/Core.pm line 5.\r\nCompilation failed in require at /usr/lib/perl5/vendor_perl/SVN/Client.pm line 4.\r\nBEGIN failed--compilation aborted at /usr/lib/perl5/vendor_perl/SVN/Client.pm line 4.\r\nCompilation failed in require at C:\\Users\\linwc\\AppData\\Local\\SourceTree\\app-3.4.2\\tools\\svn.pl line 2.\r\nBEGIN failed--compilation aborted at C:\\Users\\linwc\\AppData\\Local\\SourceTree\\app-3.4.2\\tools\\svn.pl line 2.\r\n{code}\r\n ",
+      "reporter": "林万程",
+      "createdDate": "2021-02-24T06:31:49.000+0000",
+      "comments": []
+    },
+    {
+      "summary": "Sourcetree closes pageant on exit even if it hadn\u0027t been started by Sourcetree.",
+      "key": "SRCTREEWIN-13475",
+      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13475",
+      "issueType": "N/A",
+      "priority": "Low",
+      "description": "Sourcetree closes pageant on exit even if it hadn\u0027t been started by Sourcetree.\r\n\r\n*Issue reproduction:*\r\n # Make sure that Options-\u003eGeneral-\u003e\u0027Automatically start SSH agent when Sourcetree opens\u0027 option is disabled and close Sourcetree.\r\n # Start external (\u003dnot provided with Sourcetree) pageant instance.\r\n # Start Sourcetree.\r\n # Close Sourcetree\r\n\r\n_Result:_\r\n\r\nPageant is closed.\r\n\r\n_Expected behaviour:_\r\n\r\nSourcetree should not stop pageant if it hadn\u0027t been started by Sourcetree. Pageant can be used by other applications.\r\n\r\n ",
+      "reporter": "Mateusz Berlik",
+      "createdDate": "2021-02-23T11:14:32.000+0000",
+      "comments": []
+    },
+    {
+      "summary": "SourceTree Crashes if launched by a non-admin while another user is running PAgent",
+      "key": "SRCTREEWIN-13474",
+      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13474",
+      "issueType": "N/A",
+      "priority": "Low",
+      "description": "It looks like SourceTree is trying to kill PAgent, but crashes because it doesn\u0027t have permissions to kill a PAgent process owned by another user.\r\n\r\n \r\n\r\nSteps to reproduce:\r\n\r\n1) Windows Login to User A, and launch pagent\r\n\r\n2) Fast user switch to User B, who\u0027s not an admin\r\n\r\n3) Launch SourceTree\r\n\r\n4) SourceTree crashes",
+      "reporter": "Patrick Mohr",
+      "createdDate": "2021-02-23T08:06:10.000+0000",
+      "comments": [
+        {
+          "commentText": "Wasn\u0027t sure on the severity.  I marked it major, since it\u0027s very hard to figure out what\u0027s causing it to crash, but the workaround is easy if you know what the problem is.  I only figured it out due to the stack trace\r\n\r\n \r\n\r\nStack trace:\r\n{code:java}\r\nSystem.ComponentModel.Win32Exception\r\n  HResult\u003d0x80004005\r\n  Message\u003dAccess is denied\r\n  Source\u003dSystem\r\n  StackTrace:\r\n   at System.Diagnostics.ProcessManager.OpenProcess(Int32 processId, Int32 access, Boolean throwIfExited)\r\n   at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)\r\n   at System.Diagnostics.Process.Kill()\r\n   at SourceTree.Security.PageantSshKeyAgent.Kill()\r\n   at SourceTree.Security.PageantSshKeyAgent.Launch(Boolean promptForKeyIfBlank, String keyfile)\r\n   at SourceTree.Security.DefaultSshKeyManager.LaunchSshAgent(Boolean promptForKeyIfBlank, String keyfile)\r\n   at SourceTree.Security.DefaultSshKeyManager.LaunchSshAgent(Boolean promptForKeyIfBlank)\r\n   at SourceTree.AppRoot.DoStartupTasksAfterFirstWindowDisplayed()\r\n   at SourceTree.MainWindow.OnContentRendered(EventArgs e)\r\n   at System.Windows.Window.\u003cPostContentRendered\u003eb__202_0(Object unused)\r\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\r\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\r\n   at System.Windows.Threading.DispatcherOperation.InvokeImpl()\r\n   at MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj)\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)\r\n   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)\r\n   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at System.Windows.Threading.DispatcherOperation.Invoke()\r\n   at System.Windows.Threading.Dispatcher.ProcessQueue()\r\n   at System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean\u0026 handled)\r\n   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean\u0026 handled)\r\n   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)\r\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\r\n   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)\r\n   at System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)\r\n   at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)\r\n   at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG\u0026 msg)\r\n   at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)\r\n   at System.Windows.Application.RunDispatcher(Object ignore)\r\n   at System.Windows.Application.RunInternal(Window window)\r\n   at SourceTree.App.Main()  This exception was originally thrown at this call stack:\r\n    [External Code]\r\n{code}",
+          "author": "Patrick Mohr"
+        }
+      ]
+    },
+    {
       "summary": "Unable to checkout to a local branch.",
       "key": "SRCTREEWIN-13473",
       "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13473",
@@ -694,6 +732,18 @@
         {
           "commentText": "fixed in 3.4.3",
           "author": "Anphy Jose"
+        },
+        {
+          "commentText": "I have a team member reporting this issue as reproducing on 3.4.3.  They just installed 3.4.3 and Sourcetree prompts them to pull LFS on every launch.",
+          "author": "Jon Gill"
+        },
+        {
+          "commentText": "just installed 3.4.3 and the issue still persists.\r\n\r\nIf I click \"No\" when prompted to pull down LFS content, it will ask me again the next time.\r\n\r\nI clicked \"Yes\". When I re-opened SourceTree after that, it now attempts to automatically pull LFS content each time.\r\n\r\nThis feels like a kludge.\r\n\r\n ",
+          "author": "Tristan559"
+        },
+        {
+          "commentText": "[~3ea269eeadc3], is this prompt happening on choosing Yes?  You\u0027ll get the popup every time when you open the repo on selecting No, until we implement a checkbox to save the chosen option.",
+          "author": "Anphy Jose"
         }
       ]
     },
@@ -825,61 +875,6 @@
         {
           "commentText": "Refer 12482",
           "author": "Apoorv Singhal"
-        }
-      ]
-    },
-    {
-      "summary": "Problems with Bitbucket Server Integration in Sourcetree Enterprise",
-      "key": "SRCTREEWIN-13406",
-      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13406",
-      "issueType": "N/A",
-      "priority": "Low",
-      "description": "When using \"Clone in Sourcetree\" from git repository in Bitbucket Server then following is saved in Remote Details:\r\nRemote Account: Generic Account Generic Host\r\nLegacy Account Settings: \r\n  Host Type: Bitbucket Server\r\n  Host Root Url: filled\r\n  Username: filled\r\n # When closing and reopening Sourcetree all entries in Legacy Account Settings and remote icon in the toolbar contains a exclamation mark. Without this information \"Checkout in Sourcetree\" from an branch does not find the local repository.\r\n # After entering all the information again I try \"Checkout in Sourcetree\" again from an branch. The local repository is found now. But when I press the button \"Checkout\", Sourcetree crashes",
-      "reporter": "Torsten Kleiber",
-      "createdDate": "2021-01-05T10:43:46.000+0000",
-      "comments": [
-        {
-          "commentText": "Have tested against Bitbucket Server 7.9 and 6.10.",
-          "author": "Torsten Kleiber"
-        }
-      ]
-    },
-    {
-      "summary": "Remote project configuration error when creating a Pull Request after starting app",
-      "key": "SRCTREEWIN-13405",
-      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13405",
-      "issueType": "N/A",
-      "priority": "Low",
-      "description": "h3. Issue Summary\r\nI receive this error message any time I try to create a Pull Request after starting the app. I\u0027ve tried all online fixes but this is definitely a bug.",
-      "reporter": "Kate Clark",
-      "createdDate": "2021-01-05T05:16:46.000+0000",
-      "comments": []
-    },
-    {
-      "summary": "Unable to Open Web Browser Error Message",
-      "key": "SRCTREEWIN-13404",
-      "url": "https://jira.atlassian.com/browse/SRCTREEWIN-13404",
-      "issueType": "N/A",
-      "priority": "Low",
-      "description": "When I start Soucretree I am faced with a warning sign on the \u0027Remote\u0027  icon. I click on it and I am faced with the error message \"Unable to open your web browser to \u0027git@vcs.....\u0027, do you have a default web browser set?\" \r\n\r\nI have tried the methods on the internet:\r\nTo click cance, go to settings, click the remote, don\u0027t change anything, click OK, then click OK again.\r\n\r\nThe warning exclamation mark is still there. ",
-      "reporter": "Rachel Tham",
-      "createdDate": "2021-01-05T00:56:59.000+0000",
-      "comments": [
-        {
-          "commentText": "[~5caa6f03d09f] , Do you have any default web browser set in your system? \r\n\r\n ",
-          "author": "Anphy Jose"
-        },
-        {
-          "commentText": "[~5caa6f03d09f] , Do you have any default web browser set in your system? \r\n\r\n ",
-          "author": "Anphy Jose"
-        },
-        {
-          "commentText": "My default browser is microsoft edge",
-          "author": "Rachel Tham"
-        },
-        {
-          "commentText": "[~anphy.jose] ",
-          "author": "Rachel Tham"
         }
       ]
     }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<issue>
+    <summary>testSummary</summary>
+    <key>testKey</key>
+    <url>http://test</url>
+    <issue-type>testIssueType</issue-type>
+    <priority>testPriority</priority>
+    <description>testDescription</description>
+    <reporter>testReporter</reporter>
+    <created-date>testDate</created-date>
+    <comments>
+        <comment>
+            <comment-text>testComment</comment-text>
+            <author>testAuthor</author>
+        </comment>
+    </comments>
+</issue>
