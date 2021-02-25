@@ -2,8 +2,8 @@ package fetcher.entity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -17,7 +17,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class IssueTest {
 
@@ -28,7 +29,7 @@ public class IssueTest {
     private Unmarshaller unmarshaller;
     private Issue issue;
 
-    @Before
+    @BeforeEach
     public void setUp() throws JAXBException {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         JAXBContext context = JAXBContext.newInstance(Issue.class);
